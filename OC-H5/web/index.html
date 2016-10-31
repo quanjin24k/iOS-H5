@@ -1,0 +1,54 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            margin:20px;
+        }
+    </style>
+</head>
+<body>
+<!--    OC调用H5 --OK--->
+<!--    <p id="word">1212312312312</p>-->
+<!--    <ul>-->
+<!--        <li class="change">你好</li>-->
+<!--        <li>我好</li>-->
+<!--        <li>大家好</li>-->
+<!--        <li>才是真的好</li>-->
+<!--    <ul>-->
+
+<!--H5调用OC相册 --OK-->
+<!--<button onclick="getImage();">访问相册</button>-->
+<!--<script>-->
+<!--    function getImage(){-->
+<!--        window.location.href = 'xmg://getImage';-->
+<!--    }-->
+<!--</script>-->
+
+<!--模拟用户名密码登录过程-->
+<p></p>
+<span>用户名</span>
+<input id='username'>
+<p></p>
+<span>密码</span>
+<input id='pwd' type='password'>
+<p></p>
+
+<button id='btn'>登录</button>
+
+<script>
+    var username = document.getElementById('username');
+    var pwd = document.getElementById('pwd');
+    var btn = document.getElementById('btn');
+    
+    btn.onclick = function() {
+        var name = username.value;
+        var password = pwd.value;
+        window.location.href = 'xmg://' + name + '?' + password;
+    }
+    
+</script>
+
+</body>
+        
+</html>
